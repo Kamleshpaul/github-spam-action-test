@@ -32,7 +32,7 @@ jobs:
 
     - name: Check PR Count
       run: |
-        if [[ "${{ steps.pr_count.outputs.merged_pr_count }}" -gt 2 ]]; then
+        if [[ "${{ steps.pr_count.merged_pr_count }}" -gt 2 ]]; then
           echo "PR count is greater than 2. Proceed with the workflow."
         else
           echo "PR count is not greater than 2. Blocking the PR."
